@@ -1,5 +1,6 @@
 """
-Digital Scope render a cross over the video feed.
+Digital Scope
+Render a cross over the video feed.
 Move the cross hair to the clicked location. 
 You can also click and drag to the correct location and then
 release the mouse button.
