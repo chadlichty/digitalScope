@@ -184,9 +184,8 @@ class VideoStream:
         @type source: int
         """
         self.stream = cv2.VideoCapture(source)
-        self.grabbed = None
         self.frame = None
-        self.grabbed, self.frame = self.stream.read()
+        ret, self.frame = self.stream.read()
         self.stopped = False
 
     def start(self):
@@ -203,7 +202,7 @@ class VideoStream:
         while True:
             if self.stopped:
                 return
-            self.grabbed, self.frame = self.stream.read()
+            ret, self.frame = self.stream.read()
 
     def read(self):
         """
